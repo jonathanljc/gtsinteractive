@@ -22,7 +22,7 @@ library(rnaturalearth)
 library(countrycode)
 
 # ─── 1. Load GTI Scores ───
-df_scores <- read_excel("data/Global Terrorism Index 2023.xlsx", sheet = "Overall Scores")
+df_scores <- read_excel("Global Terrorism Index 2023.xlsx", sheet = "Overall Scores")
 
 # Convert to long format
 long_df <- df_scores %>%
@@ -40,7 +40,7 @@ top15_2021 <- long_df %>%
   pull(Country)
 
 # ─── 2. Load GTI Incident Data ───
-df_incidents <- read_excel("data/Global Terrorism Index 2023.xlsx", sheet = "Combined raw")
+df_incidents <- read_excel("Global Terrorism Index 2023.xlsx", sheet = "Combined raw")
 
 # Clean & filter incident data
 df_summary_2021 <- df_incidents %>%
